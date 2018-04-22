@@ -1,4 +1,4 @@
-#
+﻿#
 # FPC1020 Touch sensor driver
 #
 # Copyright (c) 2013,2014 Fingerprint Cards AB <tech@fingerprints.com>
