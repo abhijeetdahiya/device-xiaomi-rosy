@@ -348,7 +348,12 @@ on boot
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
     
-    chown system system proc/gesture/onoff
+
+on property:dt2w.enabled=1
+    write /proc/gesture/onoff 1
+	
+on property:dt2w.enabled=0
+    write /proc/gesture/onoff 0	
 
 
 service wt_tee_check /system/bin/wt_tee_check --tee_set
